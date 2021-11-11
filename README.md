@@ -25,14 +25,14 @@ What did i do to complete this assingment?:
 *With the help of everyone and my tutor, using application of concepts, and making specific changes to the files, I was able to ensure an accesible, efficient, and easy way to build my portfolio. I had help from plenty of websites such as W3 schools, MDN and much more.*
 
 # My portfolio website:
-![Portfolio](photos\Portfolio.gif)
+![Portfolio](/photos/Portfolio.gif)
 
 
 # Git Hub:
 
-*My project was pushed to GitHub at the following repository: 
+*My project was pushed to GitHub at the following repository:https://github.com/syke2good/portfolio
 
-*You can access the deployed application with the GitHup Pages link:
+*You can access the deployed application with the GitHup Pages link:https://syke2good.github.io/portfolio/
 
 # Sources:
 
