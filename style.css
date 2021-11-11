@@ -15,7 +15,7 @@
 
     --clr-bg: #fff;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: #25ceaf;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -28,7 +28,7 @@
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 4.5;
+        --fs-h1: 3rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
@@ -36,6 +36,35 @@
 }
 
 /* Style */
+
+section {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+  .topnav a.active {
+    background-color: var(--clr-accent);
+    color: white;
+}
 
 body {
     background: var(--clr-light);
@@ -56,6 +85,36 @@ img {
 }
 
 strong { font-weight: var(--fw-bold) }
+
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+
+
+/* buttons */
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
 
 /* Typography */
 
@@ -146,11 +205,132 @@ nav {
 
 .my--services {
     background-color: var(--clr-bg);
-    background-image: url(./photos/istockphoto-697120006-612x612.jpg);
-    background-size: cover;
+    background-image: url(https://wallpaperaccess.com/full/5651978.png);
+    background-size: contain;
     background-blend-mode: multiply;
-    color: var(--clr-light);
+    color: var(--clr-dark);
 
+}
+
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;    
+
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+
+@media (min-width 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: "titile img" "subtitle img" "text img";
+        grid-column-gap: 2em;
+
+    }
+
+    
+    .section__title--about {
+        grid-area: title;
+    }
+    .about-me__img {
+        grid-row: 1 / -1;
+        grid-column: 2;
+    }
+}
+
+/* my work */
+
+.my-work {
+    background-color: var(--clr-bg);
+    color: var(--clr-light);
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.portfolio__item {
+    background:var(--clr-accent)
+    overflow: hidden;
+}
+
+.portfolio__img {
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+}
+
+.portfolio__img:hover {
+    transform: scale(1.2);
+    opacity: .75;
+}
+
+/* Footer */
+
+.footer {
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+}
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+.footer__link {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
 }
 
 
