@@ -205,10 +205,10 @@ nav {
 
 .my--services {
     background-color: var(--clr-bg);
-    background-image: url(https://wallpaperaccess.com/full/5651978.png);
+    background-image: url(https://st3.depositphotos.com/27016240/37239/v/600/depositphotos_372393188-stock-illustration-dark-retro-wallpaper-background-pattern.jpg);
     background-size: contain;
     background-blend-mode: multiply;
-    color: var(--clr-dark);
+    color: var(--clr-light);
 
 }
 
@@ -234,7 +234,7 @@ nav {
 }
 
 .service {
-    max-width: 500px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -332,6 +332,4 @@ nav {
 .footer__link:hover {
     text-decoration: underline;
 }
-
-
 
